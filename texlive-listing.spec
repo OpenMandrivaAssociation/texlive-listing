@@ -1,3 +1,9 @@
+# revision 17373
+# category Package
+# catalog-ctan /macros/latex/contrib/listing
+# catalog-date 2010-03-09 13:13:30 +0100
+# catalog-license lppl
+# catalog-version 1.2
 Name:		texlive-listing
 Version:	1.2
 Release:	1
@@ -43,6 +49,7 @@ bigcaptions is used), so packages that change the layout of
 %{_texmfdistdir}/tex/latex/listing/listing.sty
 %doc %{_texmfdistdir}/doc/latex/listing/listing.pdf
 %doc %{_texmfdistdir}/doc/latex/listing/listing.tex
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -53,3 +60,5 @@ bigcaptions is used), so packages that change the layout of
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
