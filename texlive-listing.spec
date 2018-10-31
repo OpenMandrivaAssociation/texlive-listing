@@ -6,7 +6,7 @@
 # catalog-version 1.2
 Name:		texlive-listing
 Version:	1.2
-Release:	10
+Release:	11
 Summary:	Produce formatted program listings
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/listing
