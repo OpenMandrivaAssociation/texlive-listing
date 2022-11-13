@@ -1,18 +1,12 @@
-# revision 17373
-# category Package
-# catalog-ctan /macros/latex/contrib/listing
-# catalog-date 2010-03-09 13:13:30 +0100
-# catalog-license lppl
-# catalog-version 1.2
 Name:		texlive-listing
-Version:	1.2
-Release:	11
+Version:	17373
+Release:	1
 Summary:	Produce formatted program listings
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/listing
 License:	LPPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/listing.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/listing.doc.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/listing.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/listing.doc.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -28,12 +22,12 @@ bigcaptions is used), so packages that change the layout of
 \caption still work.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -43,24 +37,10 @@ bigcaptions is used), so packages that change the layout of
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1
+%autosetup -p1 -c -a1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 1.2-2
-+ Revision: 753341
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 1.2-1
-+ Revision: 718866
-- texlive-listing
-- texlive-listing
-- texlive-listing
-- texlive-listing
-
