@@ -1,6 +1,6 @@
 Name:		texlive-listing
 Version:	17373
-Release:	1
+Release:	2
 Summary:	Produce formatted program listings
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/listing
