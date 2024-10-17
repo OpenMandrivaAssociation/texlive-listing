@@ -3,7 +3,7 @@ Version:	17373
 Release:	2
 Summary:	Produce formatted program listings
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/listing
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/listing
 License:	LPPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/listing.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/listing.doc.r%{version}.tar.xz
